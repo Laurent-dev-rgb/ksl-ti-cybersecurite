@@ -1,0 +1,18 @@
+[
+  {
+    "categorie": "Expérience professionnelle",
+    "titre": "Support informatique au Québec",
+    "description": "Soutien aux utilisateurs, gestion d’incidents et outils Microsoft 365 dans un contexte professionnel québécois.",
+    "resultat": "Expérience terrain et compréhension des besoins locaux.",
+    "technologies": "Microsoft 365, Azure, GLPI, Intune",
+    "icone": "🖥️"
+  },
+  {
+    "categorie": "Formation et projet",
+    "titre": "Architecture et gestion de la cybersécurité",
+    "description": "Travaux et projets portant sur la gouvernance, les risques, les contrôles et l’architecture de sécurité.",
+    "resultat": "Approche structurée de la cybersécurité.",
+    "technologies": "Gestion des risques, architecture, sécurité",
+    "icone": "🔐"
+  }
+]

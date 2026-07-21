@@ -1,0 +1,4 @@
+ADMINISTRATION SÉCURISÉE — ÉTAPE SUIVANTE
+
+Cette version Premium ne publie aucun panneau d’administration non sécurisé.
+Pour une administration Web sécurisée, il faudra connecter le site à GitHub, activer un CMS et limiter l’accès aux administrateurs autorisés.

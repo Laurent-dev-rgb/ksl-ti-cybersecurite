@@ -1,0 +1,31 @@
+KSL TI & CYBERSÉCURITÉ — VERSION 3, FOND BLEU
+
+Modifications :
+- fond principal bleu foncé inspiré du visuel validé;
+- image cybersécurité/serveurs intégrée dans la zone de droite;
+- logo officiel conservé;
+- texte recentré uniquement sur les TI et la cybersécurité;
+- toutes les autres pages et fonctions restent inchangées;
+- aucun outil d'administration visible publiquement.
+
+VERSION 2 AMÉLIORÉE — SITE TI ET CYBERSÉCURITÉ
+
+AMÉLIORATIONS :
+- Logo officiel utilisé exactement à partir du fichier fourni.
+- Fond principal simple, clair et professionnel.
+- Aucun bouton « Gérer les éléments » sur le site public.
+- Aucun fichier admin n’est présent dans le dossier à déployer.
+- La gestion des réalisations se fait avec l’outil local séparé.
+
+SITE 1 — KSL TI ET CYBERSÉCURITÉ
+Domaine prévu : kslsolutionquebec.ca
+1. Dans votre projet Netlify actuel, allez à Deploys.
+2. Choisissez le dossier SITE_1_KSL_TI_Cybersecurite.
+3. Attendez Published.
+4. Le domaine actuel restera associé à ce projet.
+5. Configurez les notifications des formulaires vers kslsolutionquebec@gmail.com.
+GESTION DES RÉALISATIONS :
+- Ouvrez admin.html localement avec Chrome/Edge ou allez sur /admin.html.
+- Ouvrez data/realisations.json, modifiez, enregistrez.
+- Redéployez le dossier.
+
