@@ -1,0 +1,18 @@
+MISE À JOUR DE LA VERSION 5 DANS GITHUB
+
+Méthode la plus simple :
+1. Décompressez le fichier ZIP Version 5.
+2. Ouvrez votre dépôt GitHub ksl-ti-cybersecurite.
+3. Cliquez sur Add file > Upload files.
+4. Glissez tous les fichiers et dossiers de cette version.
+5. GitHub affichera les fichiers modifiés et les nouveaux fichiers.
+6. Dans Commit changes, écrivez : Mise à jour Version 5 Enterprise.
+7. Laissez Commit directly to the main branch.
+8. Cliquez sur Commit changes.
+9. Netlify redéploiera automatiquement le site.
+
+Important :
+- ne téléversez pas le fichier ZIP lui-même;
+- téléversez le contenu du dossier décompressé;
+- le fichier netlify.toml doit rester à la racine;
+- après publication, faites Ctrl + F5 dans le navigateur.
