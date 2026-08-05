@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Services TI | KSL Conseils & Services</title>
-  <meta name="description" content="Services TI, Microsoft 365, réseaux, support et continuité pour PME au Québec.">
+  <title>Services TI et cybersécurité | KSL Conseils & Services</title>
+  <meta name="description" content="Catalogue des services TI, cybersécurité, développement Web et accompagnement numérique de KSL.">
   <meta name="theme-color" content="#03101f">
   <link rel="icon" href="/assets/img/favicon.png">
   <link rel="stylesheet" href="/assets/css/site.css">
@@ -17,32 +17,77 @@
       <span><strong>KSL Conseils & Services</strong><small>TI & CYBERSÉCURITÉ</small></span>
     </a>
     <button class="menu" aria-label="Ouvrir le menu">☰</button>
-    <nav class="links"><a class="active" href="/services.html">Services</a><a class="" href="/cybersecurite.html">Cybersécurité</a><a class="" href="/realisations.html">Expérience</a><a class="" href="/a-propos.html">À propos</a><a class="btn btn-primary" href="/soumission.html">Soumission</a></nav>
+    <nav class="links">
+      <a class="active" href="/services.html">Services</a>
+      <a href="/cybersecurite.html">Cybersécurité</a>
+      <a href="/realisations.html">Expérience</a>
+      <a href="/carrieres.html">Carrières</a>
+      <a href="/a-propos.html">À propos</a>
+      <a class="btn btn-primary" href="/soumission.html">Soumission</a>
+    </nav>
   </div>
 </header>
 
 <main>
-<section class="page-hero"><div class="container"><p class="eyebrow">Services technologiques</p><h1>Services TI conçus pour les PME</h1><p>Un accompagnement structuré pour soutenir vos utilisateurs, sécuriser vos environnements et améliorer la continuité de vos opérations.</p></div></section>
-<section class="section-dark"><div class="container">
-<div class="section-head"><p class="eyebrow">Nos services</p><h2>Des services concrets, documentés et proportionnés</h2><p>Nous intervenons à distance ou sur place selon le besoin et la nature du mandat.</p></div>
-<div class="enterprise-grid">
-<article class="enterprise-card"><div class="icon-box">🎧</div><h3>Support informatique</h3><p>Assistance aux utilisateurs et résolution d’incidents.</p><ul><li>Dépannage à distance</li><li>Intervention sur place</li><li>Gestion des postes</li><li>Documentation des incidents</li></ul></article>
-<article class="enterprise-card"><div class="icon-box">🌐</div><h3>Infrastructures et réseaux</h3><p>Fiabilité, visibilité et maintenance de vos équipements.</p><ul><li>Inventaire TI</li><li>Configuration réseau</li><li>Documentation technique</li><li>Recommandations d’évolution</li></ul></article>
-<article class="enterprise-card"><div class="icon-box">☁️</div><h3>Microsoft 365</h3><p>Gestion et sécurisation des outils collaboratifs.</p><ul><li>Comptes et licences</li><li>Accès et collaboration</li><li>Configuration de base</li><li>Assistance aux utilisateurs</li></ul></article>
-<article class="enterprise-card"><div class="icon-box">💾</div><h3>Sauvegarde et continuité</h3><p>Réduction du risque de perte de données.</p><ul><li>Évaluation des sauvegardes</li><li>Plan de reprise simplifié</li><li>Tests et vérifications</li><li>Recommandations prioritaires</li></ul></article>
-<article class="enterprise-card"><div class="icon-box">🔐</div><h3>Gestion des accès</h3><p>Contrôle des identités et des privilèges.</p><ul><li>Comptes utilisateurs</li><li>Authentification multifacteur</li><li>Accès administratifs</li><li>Processus d’arrivée et départ</li></ul></article>
-<article class="enterprise-card"><div class="icon-box">📋</div><h3>Conseil et documentation</h3><p>Décisions appuyées par une information claire.</p><ul><li>État de situation</li><li>Priorisation des actions</li><li>Procédures internes</li><li>Plan d’amélioration</li></ul></article>
-</div></div></section>
-<section class="section-alt"><div class="container callout"><div><p class="eyebrow">Mandat sur mesure</p><h2>Votre environnement a des besoins particuliers?</h2><p>Nous pouvons commencer par une rencontre exploratoire afin de clarifier le périmètre, les risques et les priorités.</p><a class="btn btn-primary" href="/soumission.html">Demander une consultation</a></div><div class="callout-panel"><h3>Approche KSL</h3><ul><li>Analyse du contexte réel</li><li>Recommandations compréhensibles</li><li>Documentation des actions</li><li>Suivi adapté aux moyens de la PME</li></ul></div></div></section>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Catalogue officiel</p>
+    <h1>Des services technologiques complets pour les PME</h1>
+    <p>TI, cybersécurité, Microsoft 365, Azure, développement Web et transformation numérique.</p>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Services administrables</p>
+      <h2>Une offre claire, évolutive et gérée depuis KSL Admin</h2>
+      <p>Les services affichés ci-dessous sont synchronisés avec le catalogue Supabase.</p>
+    </div>
+    <div class="service-filters" id="service-filters">
+      <button class="active" data-filter="">Tous</button>
+      <button data-filter="ti">TI</button>
+      <button data-filter="cybersecurite">Cybersécurité</button>
+      <button data-filter="developpement">Développement</button>
+      <button data-filter="entreprises">Services aux entreprises</button>
+    </div>
+    <div id="dynamic-services" class="enterprise-grid" aria-live="polite">
+      <div class="notice">Chargement du catalogue des services…</div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container callout">
+    <div>
+      <p class="eyebrow">Mandat sur mesure</p>
+      <h2>Votre environnement a des besoins particuliers?</h2>
+      <p>Une rencontre exploratoire permet de clarifier le périmètre, les risques et les priorités avant toute proposition.</p>
+      <a class="btn btn-primary" href="/soumission.html">Demander une consultation</a>
+    </div>
+    <div class="callout-panel">
+      <h3>Principes d’intervention</h3>
+      <ul>
+        <li>Analyse du contexte réel</li>
+        <li>Recommandations compréhensibles</li>
+        <li>Documentation des actions</li>
+        <li>Autorisation écrite avant tout test d’intrusion</li>
+      </ul>
+    </div>
+  </div>
+</section>
 </main>
+
 <footer class="footer">
   <div class="container footer-grid">
     <div><img class="footer-logo" src="/assets/img/logo.png" alt="KSL"><p>Solutions TI, cybersécurité et accompagnement de proximité au Québec.</p></div>
-    <div><h3>Navigation</h3><a href="/services.html">Services</a><a href="/cybersecurite.html">Cybersécurité</a><a href="/realisations.html">Expérience</a><a href="/a-propos.html">À propos</a></div>
+    <div><h3>Navigation</h3><a href="/services.html">Services</a><a href="/cybersecurite.html">Cybersécurité</a><a href="/realisations.html">Expérience</a><a href="/carrieres.html">Carrières</a></div>
     <div><h3>Contact</h3><a href="tel:+13673303592">(367) 330-3592</a><a href="mailto:kslsolutionquebec@gmail.com">kslsolutionquebec@gmail.com</a><span>Québec, QC</span></div>
   </div>
   <div class="container footer-bottom">© 2026 KSL Conseils & Services S.E.N.C. — Tous droits réservés.</div>
 </footer>
 <a class="whatsapp" href="https://wa.me/13673303592" target="_blank" rel="noopener">WhatsApp</a>
 <script src="/assets/js/site.js"></script>
-</body></html>
+<script type="module" src="/assets/js/services-catalog.js"></script>
+</body>
+</html>

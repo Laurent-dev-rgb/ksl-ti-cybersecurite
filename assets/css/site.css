@@ -297,3 +297,8 @@ body{background:var(--bg);color:var(--text)}
   .page-hero{padding:72px 0 54px}
   .callout{padding:28px}
 }
+
+.service-filters{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 28px}
+.service-filters button{border:1px solid rgba(107,210,255,.35);background:transparent;color:#dff7ff;padding:10px 16px;border-radius:999px;font-weight:800;cursor:pointer}
+.service-filters button.active,.service-filters button:hover{background:#20aef3;color:#03101f;border-color:#20aef3}
+.service-warning{margin-top:16px;padding:12px;border-left:4px solid #ffbc4b;background:rgba(255,188,75,.1);border-radius:8px;color:#ffe1a8;font-weight:700}
