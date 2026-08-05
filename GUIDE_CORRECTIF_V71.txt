@@ -1,0 +1,20 @@
+KSL TI V7.1 — Correctif d’affichage du catalogue
+
+Ce correctif retire la dépendance JavaScript externe et lit directement la table
+Supabase `service_catalog` par l’API REST publique.
+
+Déploiement :
+1. Téléverser tout le contenu de ce dossier dans le dépôt ksl-ti-cybersecurite.
+2. Commit : KSL TI V7.1 - Correctif affichage services Supabase
+3. Attendre le déploiement Netlify.
+4. Ouvrir https://kslsolutionquebec.ca/services
+5. Faire Ctrl+F5.
+
+Résultat attendu :
+- 13 cartes de services sur le site TI;
+- filtres fonctionnels;
+- bouton « Demander ce service »;
+- mises à jour Admin visibles après rechargement.
+
+Le catalogue de secours garantit que les services restent visibles même en cas
+d’indisponibilité temporaire de Supabase.
