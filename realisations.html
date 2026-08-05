@@ -12,35 +12,86 @@
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="/index.html">
+    <a class="brand" href="/index.html" aria-label="Retour à l'accueil">
       <img src="/assets/img/logo.png" alt="Logo KSL Conseils & Services">
       <span><strong>KSL Conseils & Services</strong><small>TI & CYBERSÉCURITÉ</small></span>
     </a>
     <button class="menu" aria-label="Ouvrir le menu">☰</button>
-    <nav class="links"><a class="" href="/services.html">Services</a><a class="" href="/cybersecurite.html">Cybersécurité</a><a class="active" href="/realisations.html">Expérience</a><a class="" href="/carrieres.html">Carrières</a><a class="" href="/a-propos.html">À propos</a><a class="btn btn-primary" href="/soumission.html">Soumission</a></nav>
+    <nav class="links">
+      <a href="/index.html">Accueil</a>
+      <a href="/services.html">Services</a>
+      <a href="/cybersecurite.html">Cybersécurité</a>
+      <a class="active" href="/realisations.html">Expérience</a>
+      <a href="/carrieres.html">Carrières</a>
+      <a href="/a-propos.html">À propos</a>
+      <a class="division-link" href="https://entretien.kslsolutionquebec.ca/">Entretien</a>
+      <a class="btn btn-primary" href="/soumission.html">Soumission</a>
+    </nav>
   </div>
 </header>
 
 <main>
-<section class="page-hero"><div class="container"><p class="eyebrow">Réalisations et expérience</p><h1>Une expérience présentée avec transparence</h1><p>Mandats KSL, expériences professionnelles et projets de formation sont clairement distingués afin de présenter un portfolio crédible.</p></div></section>
-<section class="section-dark"><div class="container">
-<div class="section-head"><p class="eyebrow">Portfolio</p><h2>Expériences et projets représentatifs</h2><p>Les exemples ci-dessous ne divulguent aucune information confidentielle sur les organisations concernées.</p></div>
-<div class="portfolio-grid-v5" data-portfolio>
-<article class="portfolio-v5"><div class="cover">🖥️</div><div class="content"><div class="badges"><span class="badge">Expérience professionnelle</span></div><h3>Support informatique au Québec</h3><p>Soutien aux utilisateurs, gestion d’incidents et utilisation d’outils Microsoft 365 dans un contexte professionnel québécois.</p><div class="badges"><span class="badge">Microsoft 365</span><span class="badge">Support</span><span class="badge">Documentation</span></div></div></article>
-<article class="portfolio-v5"><div class="cover">🔐</div><div class="content"><div class="badges"><span class="badge">Formation et projet</span></div><h3>Architecture et gestion de la cybersécurité</h3><p>Travaux portant sur la gouvernance, les risques, les contrôles et l’architecture de sécurité.</p><div class="badges"><span class="badge">Gouvernance</span><span class="badge">Risques</span><span class="badge">Architecture</span></div></div></article>
-<article class="portfolio-v5"><div class="cover">📊</div><div class="content"><div class="badges"><span class="badge">Mandat KSL</span></div><h3>Analyse et documentation TI</h3><p>Organisation de l’information technique, clarification des besoins et préparation de recommandations structurées.</p><div class="badges"><span class="badge">Analyse</span><span class="badge">Conseil</span><span class="badge">PME</span></div></div></article>
-</div>
-</div></section>
-<section class="section-alt"><div class="container callout"><div><p class="eyebrow">Confidentialité</p><h2>Nous protégeons les informations de nos clients</h2><p>Les noms, configurations et données sensibles ne sont jamais publiés sans autorisation explicite.</p></div><div class="callout-panel"><h3>Éléments pouvant être présentés</h3><ul><li>Nature générale du mandat</li><li>Technologies utilisées</li><li>Résultats non confidentiels</li><li>Leçons et méthodes appliquées</li></ul></div></div></section>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Réalisations et expérience</p>
+    <h1>Une expérience présentée avec transparence</h1>
+    <p>Mandats KSL, expériences professionnelles et projets de formation sont clairement distingués.</p>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Portfolio administrable</p>
+      <h2>Expériences et projets représentatifs</h2>
+      <p>Le contenu est géré depuis KSL Admin et ne divulgue aucune information confidentielle.</p>
+    </div>
+
+    <div class="service-filters" id="portfolio-filters">
+      <button class="active" data-filter="">Tous</button>
+      <button data-filter="ti">TI</button>
+      <button data-filter="cybersecurite">Cybersécurité</button>
+      <button data-filter="developpement">Développement</button>
+      <button data-filter="entreprises">Services aux entreprises</button>
+    </div>
+
+    <div class="portfolio-grid-v5" id="dynamic-portfolio" aria-live="polite">
+      <div class="notice">Chargement des réalisations…</div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container callout">
+    <div>
+      <p class="eyebrow">Confidentialité</p>
+      <h2>Nous protégeons les informations de nos clients</h2>
+      <p>Les noms, configurations et données sensibles ne sont jamais publiés sans autorisation explicite.</p>
+    </div>
+    <div class="callout-panel">
+      <h3>Éléments pouvant être présentés</h3>
+      <ul>
+        <li>Nature générale du mandat</li>
+        <li>Technologies utilisées</li>
+        <li>Résultats non confidentiels</li>
+        <li>Leçons et méthodes appliquées</li>
+      </ul>
+    </div>
+  </div>
+</section>
 </main>
+
 <footer class="footer">
   <div class="container footer-grid">
     <div><img class="footer-logo" src="/assets/img/logo.png" alt="KSL"><p>Solutions TI, cybersécurité et accompagnement de proximité au Québec.</p></div>
-    <div><h3>Navigation</h3><a href="/services.html">Services</a><a href="/cybersecurite.html">Cybersécurité</a><a href="/realisations.html">Expérience</a><a href="/carrieres.html">Carrières</a><a href="/a-propos.html">À propos</a></div>
-    <div><h3>Contact</h3><a href="tel:+13673303592">(367) 330-3592</a><a href="mailto:kslsolutionquebec@gmail.com">kslsolutionquebec@gmail.com</a><span>Québec, QC</span></div>
+    <div><h3>Navigation</h3><a href="/index.html">Accueil</a><a href="/services.html">Services</a><a href="/cybersecurite.html">Cybersécurité</a><a href="/realisations.html">Expérience</a><a href="/carrieres.html">Carrières</a></div>
+    <div><h3>Divisions</h3><a href="/">TI & Cybersécurité</a><a href="https://entretien.kslsolutionquebec.ca/">Entretien</a></div>
   </div>
   <div class="container footer-bottom">© 2026 KSL Conseils & Services S.E.N.C. — Tous droits réservés.</div>
 </footer>
+
 <a class="whatsapp" href="https://wa.me/13673303592" target="_blank" rel="noopener">WhatsApp</a>
 <script src="/assets/js/site.js"></script>
-</body></html>
+<script defer src="/assets/js/portfolio-catalog.js"></script>
+</body>
+</html>
