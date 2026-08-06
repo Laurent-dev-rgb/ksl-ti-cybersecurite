@@ -310,3 +310,7 @@ body{background:var(--bg);color:var(--text)}
 .portfolio-results ul{margin:8px 0 0;padding-left:20px}
 .portfolio-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .portfolio-links a{display:inline-flex;padding:9px 12px;border-radius:10px;background:#20aef3;color:#03101f;font-weight:800;text-decoration:none}
+
+#dynamic-services{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:26px}
+#dynamic-services .enterprise-card{display:flex!important;flex-direction:column;min-height:100%;opacity:1!important;visibility:visible!important;transform:none!important}
+#dynamic-services .enterprise-card ul{flex:1}
