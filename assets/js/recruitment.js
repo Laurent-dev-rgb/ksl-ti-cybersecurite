@@ -13,7 +13,12 @@ const esc = value => String(value || '').replace(/[&<>"']/g, c => ({'&':'&amp;',
 function status(message, type='error'){statusNode.className=`status ${type}`;statusNode.textContent=message}
 async function loadJobs(){
   const { data, error } = await supabase.from('job_postings').select('*').in('division',[...divisions,'commun']).eq('status','publiee').order('published_at',{ascending:false})
-  if(error){jobsNode.innerHTML='<div class="empty">Offres temporairement indisponibles.</div>';console.error(error);return}
+  if(error){
+      jobsNode.innerHTML='<div class="empty">Les offres ne peuvent pas être chargées pour le moment. Veuillez actualiser la page.</div>'
+      jobSelect.innerHTML='<option value="">Aucune offre disponible</option>'
+      console.error('Erreur chargement offres KSL:', error)
+      return
+    }
   jobs=data||[]
   jobSelect.innerHTML='<option value="">Sélectionnez une offre</option>'+jobs.map(j=>`<option value="${j.id}">${esc(j.title)}</option>`).join('')
   jobsNode.innerHTML=jobs.length?jobs.map(j=>`<article class="card job"><h3>${esc(j.title)}</h3><div class="badges"><span class="badge">${esc(j.location||'Québec')}</span><span class="badge">${esc(j.employment_type||'')}</span><span class="badge">${esc((j.work_mode||'').replace('_',' '))}</span></div><p>${esc(j.summary)}</p><details><summary>Voir les détails</summary><div class="job-detail"><h4>Description</h4>${esc(j.description)}<h4>Exigences</h4>${esc(j.requirements||'À préciser')}<h4>Avantages</h4>${esc(j.benefits||'À préciser')}</div></details><button class="button apply" data-id="${j.id}">Postuler</button></article>`).join(''):'<div class="empty">Aucune offre publiée actuellement. Vous pouvez envoyer une candidature spontanée.</div>'
