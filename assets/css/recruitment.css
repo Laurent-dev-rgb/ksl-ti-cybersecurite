@@ -1,1 +1,77 @@
 :root{font-family:Inter,Segoe UI,Arial,sans-serif;color:#10263b;--navy:#061d31;--blue:#1597dd;--cyan:#39bee9;--green:#14b884;--line:#d8e5ec}*{box-sizing:border-box}body{margin:0;background:#f4f8fa}.wrap{max-width:1180px;margin:auto;padding:30px 20px}.hero{background:linear-gradient(135deg,#061d31,#0f4d69);color:#fff;padding:70px 0}.hero p{color:#9ce3ff;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,6vw,5rem);margin:.2em 0}.hero span{color:#c8dce8}.grid{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;margin-top:34px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 14px 35px rgba(11,45,67,.08)}.job{margin-bottom:14px}.job h3{margin:0 0 8px}.badges{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.badge{padding:6px 10px;border-radius:999px;background:#e8f6fc;color:#096491;font-weight:700;font-size:.86rem}.button{border:0;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;padding:12px 17px;border-radius:10px;font-weight:800;cursor:pointer}.field{display:grid;gap:7px;margin:12px 0}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit}.status{padding:12px;border-radius:10px;margin-bottom:14px}.success{background:#e7faf3;color:#087250}.error{background:#fff0f0;color:#a12626}.hidden{display:none}.muted{color:#687d8d}.job-detail{white-space:pre-line}.consent{display:flex;gap:9px;align-items:flex-start;font-size:.9rem}.empty{text-align:center;color:#687d8d;padding:40px}@media(max-width:800px){.grid{grid-template-columns:1fr}.hero{padding:48px 0}}
+/* ===== CONTRASTE PAGE CARRIÈRES ===== */
+
+.card,
+.card.job {
+  background: #ffffff !important;
+  color: #10263b !important;
+}
+
+.card.job h3,
+.card.job h4,
+.card.job strong {
+  color: #10263b !important;
+  opacity: 1 !important;
+}
+
+.card.job p,
+.card.job .job-detail,
+.card.job .job-detail div {
+  color: #405d76 !important;
+  opacity: 1 !important;
+}
+
+.card.job summary {
+  color: #159bd7 !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  cursor: pointer;
+}
+
+#application-form h2,
+#application-form h3,
+#application-form label {
+  color: #10263b !important;
+  opacity: 1 !important;
+}
+
+#application-form p,
+#application-form small,
+#application-form .consent {
+  color: #58758f !important;
+  opacity: 1 !important;
+}
+
+#application-form input,
+#application-form textarea,
+#application-form select {
+  color: #10263b !important;
+  background: #ffffff !important;
+  border: 1px solid #b8cddd !important;
+  opacity: 1 !important;
+}
+
+#application-form input::placeholder,
+#application-form textarea::placeholder {
+  color: #71879a !important;
+  opacity: 1 !important;
+}
+
+#application-form input[type="file"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #405d76 !important;
+  background: #ffffff !important;
+}
+
+#application-form input[type="file"]::file-selector-button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-right: 12px;
+  background: #159bd7;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
