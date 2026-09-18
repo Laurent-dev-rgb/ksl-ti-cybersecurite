@@ -75,3 +75,17 @@
   font-weight: 700;
   cursor: pointer;
 }
+/* Informations secondaires */
+.badge-info {
+  background: #ffffff !important;
+  color: #58758f !important;
+  border: 1px solid #b8cddd !important;
+}
+
+/* Type d'emploi mis en évidence */
+.badge-active {
+  background: #159bd7 !important;
+  color: #ffffff !important;
+  border: 1px solid #159bd7 !important;
+  font-weight: 700;
+}
