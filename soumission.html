@@ -29,8 +29,8 @@
 <div class="form-grid"><div><label for="nom">Nom *</label><input id="nom" name="nom" required></div><div><label for="entreprise">Entreprise</label><input id="entreprise" name="entreprise"></div><div><label for="courriel">Courriel *</label><input id="courriel" type="email" name="courriel" required></div><div><label for="telephone">Téléphone</label><input id="telephone" name="telephone"></div></div>
 <label for="besoin">Besoin principal</label><select id="besoin" name="besoin"><option>Support informatique</option><option>Cybersécurité</option><option>Microsoft 365</option><option>Infrastructure ou réseau</option><option>Conseil et documentation</option><option>Autre</option></select>
 <label for="description">Description du besoin *</label><textarea id="description" name="description" required></textarea>
- <label style="display:flex;gap:10px;align-items:flex-start;margin:18px 0">
-  <input id="consentement" type="checkbox" required style="width:auto;margin-top:4px">
+ <label class="consent-row">
+  <input id="consentement" type="checkbox" required>
   <span>
     J’accepte que KSL utilise mes renseignements pour répondre à ma demande,
     conformément à la politique de confidentialité.
@@ -52,68 +52,5 @@
 </footer>
 <a class="whatsapp" href="https://wa.me/13673303592" target="_blank" rel="noopener">WhatsApp</a>
 <script src="/assets/js/site.js"></script>
-  <script type="module">
-  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
-
-  const supabaseUrl = 'https://rgffoijcimsdesezjksi.supabase.co'
-  const supabaseKey = 'sb_publishable_h9CaN2YQ5lYXlfqBGT2ofA_ematARSs'
-
-  const supabase = createClient(supabaseUrl, supabaseKey)
-
-  const form = document.querySelector('#quote-form')
-  const statusBox = document.querySelector('#form-status')
-  const submitButton = form.querySelector('button[type="submit"]')
-
-  function afficherMessage(message, succes = false) {
-    statusBox.hidden = false
-    statusBox.textContent = message
-    statusBox.style.color = succes ? '#25c77b' : '#ff8d8d'
-    statusBox.style.borderColor = succes ? '#25c77b' : '#d9534f'
-  }
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault()
-
-    submitButton.disabled = true
-    submitButton.textContent = 'Envoi en cours…'
-    statusBox.hidden = true
-
-    const demande = {
-      full_name: document.querySelector('#nom').value.trim(),
-      company: document.querySelector('#entreprise').value.trim() || null,
-      email: document.querySelector('#courriel').value.trim(),
-      phone: document.querySelector('#telephone').value.trim() || null,
-      service: document.querySelector('#besoin').value,
-      message: document.querySelector('#description').value.trim(),
-      priority: 'normale',
-      consent_privacy: document.querySelector('#consentement').checked,
-      source: 'site_ti',
-      status: 'nouveau'
-    }
-
-    try {
-      const { error } = await supabase
-        .from('quotes')
-        .insert(demande)
-
-      if (error) throw error
-
-      form.reset()
-
-      afficherMessage(
-        'Votre demande a été envoyée avec succès. KSL communiquera avec vous prochainement.',
-        true
-      )
-    } catch (error) {
-      console.error('Erreur Supabase :', error)
-
-      afficherMessage(
-        'La demande n’a pas pu être envoyée. Veuillez réessayer ou contacter directement KSL.'
-      )
-    } finally {
-      submitButton.disabled = false
-      submitButton.textContent = 'Envoyer la demande'
-    }
-  })
-</script>
+<script type="module" src="/assets/js/quote.js"></script>
 </body></html>
