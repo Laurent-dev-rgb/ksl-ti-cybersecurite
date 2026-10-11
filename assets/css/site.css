@@ -358,3 +358,14 @@ body{background:var(--bg);color:var(--text)}
 .legal-contact strong{color:#fff}.legal-contact a{color:#6bdcff;font-weight:800}
 @media(max-width:980px){.product-grid,.product-detail-grid{grid-template-columns:1fr}.flow-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.flow-grid{grid-template-columns:1fr}.privacy-public{align-items:flex-start;flex-direction:column}.privacy-links{justify-content:flex-start}}
+
+
+/* =========================================================
+   KSL SECURITY CLEANUP — retrait des styles inline
+   ========================================================= */
+.portfolio-grid-spaced{margin-top:28px}
+.thankyou-section{min-height:65vh;display:grid;place-items:center}
+.consent-row{display:flex!important;gap:10px;align-items:flex-start;margin:18px 0}
+.consent-row input[type="checkbox"]{width:auto!important;margin-top:4px}
+.notice-success{color:#25c77b!important;border-color:#25c77b!important}
+.notice-error{color:#ff8d8d!important;border-color:#d9534f!important}
