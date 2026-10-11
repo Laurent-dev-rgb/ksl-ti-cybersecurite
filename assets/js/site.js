@@ -31,6 +31,14 @@ function ensureKslGlobalUi(){
       productLinks.slice(1).forEach(a=>a.remove());
     }
 
+    if(!anchors.some(a=>(a.getAttribute('href')||'').includes('kslgroupe.ca') && !(a.getAttribute('href')||'').includes('technologies.'))){
+      const main=document.createElement('a');
+      main.href='https://kslgroupe.ca/';
+      main.textContent='KSL Groupe';
+      const home=nav.querySelector('a[href="/index.html"],a[href="index.html"],a[href="/"]');
+      if(home) home.insertAdjacentElement('afterend',main); else nav.prepend(main);
+    }
+
     if(productLinks.length===0){
       const a=document.createElement('a');
       a.href='/produits.html';
@@ -40,6 +48,8 @@ function ensureKslGlobalUi(){
       if(services) services.insertAdjacentElement('afterend',a); else nav.prepend(a);
     }
   }
+
+  document.querySelectorAll('a[href*="entretien.technologies.kslgroupe.ca"]').forEach(a=>a.href='https://entretien.kslgroupe.ca/');
 
   // Favicon : utilise le même logo que le site.
   const logoHref='/assets/img/logo-technologies.png';
