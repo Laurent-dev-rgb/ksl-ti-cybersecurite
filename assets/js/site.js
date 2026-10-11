@@ -21,22 +21,38 @@ function normalizeNavPath(a){
 function ensureKslGlobalUi(){
   const nav=document.querySelector('.links');
   if(nav){
-    const seen=new Set();
-    [...nav.querySelectorAll('a')].forEach(a=>{
-      const path=normalizeNavPath(a);
-      if(seen.has(path)) a.remove(); else seen.add(path);
+    const anchors=[...nav.querySelectorAll('a')];
+    const productLinks=anchors.filter(a=>{
+      const href=(a.getAttribute('href')||'').trim();
+      return href==='/produits.html' || href==='produits.html';
     });
 
-    const hasProducts=[...nav.querySelectorAll('a')].some(a=>normalizeNavPath(a)==='/produits.html');
-    if(!hasProducts){
+    if(productLinks.length>1){
+      productLinks.slice(1).forEach(a=>a.remove());
+    }
+
+    if(productLinks.length===0){
       const a=document.createElement('a');
       a.href='/produits.html';
       a.textContent='Produits';
       if(location.pathname.endsWith('/produits.html')||location.pathname.endsWith('/ksl-pointage.html')) a.classList.add('active');
-      const services=[...nav.querySelectorAll('a')].find(a=>normalizeNavPath(a)==='/services.html');
+      const services=nav.querySelector('a[href="/services.html"],a[href="services.html"]');
       if(services) services.insertAdjacentElement('afterend',a); else nav.prepend(a);
     }
   }
+
+  // Favicon : utilise le même logo que le site.
+  const logoHref='/assets/img/logo-technologies.png';
+  document.querySelectorAll('link[rel="icon"],link[rel="shortcut icon"],link[rel="apple-touch-icon"]').forEach(el=>el.remove());
+  const icon=document.createElement('link');
+  icon.rel='icon';
+  icon.type='image/png';
+  icon.href=logoHref;
+  document.head.appendChild(icon);
+  const apple=document.createElement('link');
+  apple.rel='apple-touch-icon';
+  apple.href=logoHref;
+  document.head.appendChild(apple);
 }
 
 async function loadPrivacyContacts(){
