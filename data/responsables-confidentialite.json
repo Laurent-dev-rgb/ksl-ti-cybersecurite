@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "responsables": [
+    {
+      "role": "Responsable de la protection des renseignements personnels",
+      "organization": "KSL GROUPE INC.",
+      "name": "",
+      "email": "info@kslgroupe.ca",
+      "address": "9723, rue de la Camomille, Québec (Québec) G2B 0P1",
+      "public": true,
+      "principal": true
+    }
+  ]
+}
